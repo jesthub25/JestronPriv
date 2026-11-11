@@ -1,0 +1,32 @@
+package com.jestron.jestronpriv.mixin;
+
+import com.jestron.jestronpriv.client.gui.Theme;
+import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
+import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
+import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.gui.components.AbstractWidget;
+import net.minecraft.client.gui.components.EditBox;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.resources.ResourceLocation;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.injection.At;
+
+import java.util.function.Function;
+
+/** JestronPriv ekranlarinda yazi kutusu cercevesi menu temasiyla. */
+@Mixin(EditBox.class)
+public abstract class ThemeEditBoxMixin {
+
+    @WrapOperation(method = "renderWidget", at = @At(value = "INVOKE",
+            target = "Lnet/minecraft/client/gui/GuiGraphics;blitSprite(Ljava/util/function/Function;Lnet/minecraft/resources/ResourceLocation;IIII)V"))
+    private void jestronpriv$themeEdit(GuiGraphics g, Function<ResourceLocation, RenderType> fn, ResourceLocation sprite, int x, int y, int w, int h,
+                                       Operation<Void> original) {
+        boolean done = false;
+        try {
+            AbstractWidget self = (AbstractWidget) (Object) this;
+            done = Theme.editBox(g, x, y, w, h, self.isFocused());
+        } catch (Throwable ignored) {
+        }
+        if (!done) original.call(g, fn, sprite, x, y, w, h);
+    }
+}

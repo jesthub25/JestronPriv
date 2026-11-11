@@ -1,0 +1,18 @@
+{
+ "providers": [
+  {
+   "type": "ttf",
+   "file": "jestronpriv:plak.ttf",
+   "size": 9.51,
+   "oversample": 4.0,
+   "shift": [
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "type": "reference",
+   "id": "minecraft:default"
+  }
+ ]
+}

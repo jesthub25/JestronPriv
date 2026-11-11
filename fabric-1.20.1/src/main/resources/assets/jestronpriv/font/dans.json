@@ -1,0 +1,18 @@
+{
+ "providers": [
+  {
+   "type": "ttf",
+   "file": "jestronpriv:dans.ttf",
+   "size": 9.71,
+   "oversample": 4.0,
+   "shift": [
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "type": "reference",
+   "id": "minecraft:default"
+  }
+ ]
+}

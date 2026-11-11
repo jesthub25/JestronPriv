@@ -1,0 +1,115 @@
+JestronPriv - Üçüncü taraf bileşenler / Third-party notices
+=========================================================
+
+Özel totem sesi özelliği (MP4 / M4A / MOV / 3GP / MP3 ses çözme) için aşağıdaki açık kaynak
+kodlar kaynak olarak projeye eklenmiştir (src/main/java/org/jcodec ve src/main/java/net/sourceforge/jaad).
+JestronPriv'in kendi kodu bu lisanslardan etkilenmez (All Rights Reserved).
+
+-----------------------------------------------------------------------------
+1) JCodec  (org.jcodec.*)  -  https://github.com/jcodec/jcodec
+   Lisans: BSD 2-Clause ("FreeBSD")
+-----------------------------------------------------------------------------
+Copyright 2008-2019 JCodecProject
+
+Redistribution  and  use  in   source  and   binary   forms,  with  or  without
+modification, are permitted provided  that the following  conditions  are  met:
+
+Redistributions of  source code  must  retain the above  copyright notice, this
+list of conditions and the following disclaimer. Redistributions in binary form
+must  reproduce  the above  copyright notice, this  list of conditions  and the
+following disclaimer in the documentation and/or other  materials provided with
+the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING,  BUT NOT LIMITED TO, THE  IMPLIED
+WARRANTIES  OF  MERCHANTABILITY  AND  FITNESS  FOR  A  PARTICULAR  PURPOSE  ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY,  OR CONSEQUENTIAL DAMAGES
+(INCLUDING,  BUT NOT LIMITED TO,  PROCUREMENT OF SUBSTITUTE GOODS  OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS;  OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ANY  THEORY  OF  LIABILITY,  WHETHER  IN  CONTRACT,  STRICT LIABILITY,  OR TORT
+(INCLUDING  NEGLIGENCE OR OTHERWISE)  ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+-----------------------------------------------------------------------------
+2) JAAD - Java Advanced Audio Decoder  (net.sourceforge.jaad.*)
+   http://jaadec.sourceforge.net  -  Lisans: Kamu malı (Public Domain).
+   JCodec projesinin JAAD üzerindeki değişiklikleri yukarıdaki BSD lisansıyla dağıtılır.
+-----------------------------------------------------------------------------
+Değişiklik: net/sourceforge/jaad/aac/syntax/ICStream.java - PNS (algısal gürültü) üretecindeki
+rastgele sayı hatası (çarpma yerine "*=" kullanımı NaN üretip sesi susturuyordu) düzeltildi ve
+sıfır enerjide bölme koruması eklendi.
+
+-----------------------------------------------------------------------------
+Emoji görselleri (assets/jestronpriv/textures/emoji/atlas.png)
+-----------------------------------------------------------------------------
+Twemoji - Copyright 2019 Twitter, Inc and other contributors; 2024- jdecked and contributors
+https://github.com/jdecked/twemoji
+Grafikler: Creative Commons Attribution 4.0 International (CC-BY 4.0)
+https://creativecommons.org/licenses/by/4.0/
+Değişiklik: 72x72 PNG'ler 32x32 hücrelik tek bir atlasa küçültülüp birleştirildi.
+Tam lisans metni: assets/jestronpriv/emoji/licenses/Twemoji-CC-BY-4.0.txt
+
+-----------------------------------------------------------------------------
+Emoji adları / anahtar kelimeleri (assets/jestronpriv/emoji/index.tsv)
+-----------------------------------------------------------------------------
+Unicode CLDR annotations (tr, en) - Copyright © 2001-2026 Unicode, Inc.
+Unicode License v3 - https://www.unicode.org/license.txt
+Tam lisans metni: assets/jestronpriv/emoji/licenses/Unicode-CLDR-LICENSE.txt
+
+-----------------------------------------------------------------------------
+İsim etiketi yazı tipleri (assets/jestronpriv/font/*.ttf)
+-----------------------------------------------------------------------------
+Aşağıdaki yazı tipleri Google Fonts'tan (https://fonts.google.com) alınmıştır. Değişiklikler: oyunda gereken
+karakterlere göre alt kümeye indirildi, değişken yazı tiplerinde tek ağırlık seçildi ve OFL'deki "Ayrılmış Yazı
+Tipi Adı" kuralına uymak için iç adları "JestronPriv <Ad>" olarak değiştirildi (çizimler değiştirilmedi).
+Her birinin tam lisans metni assets/jestronpriv/font/licenses/ klasöründedir. OFL yazı tipleri tek başına
+satılamaz; Apache 2.0 lisanslılar lisans metniyle birlikte dağıtılır.
+(dosya · özgün yazı tipi · lisans · telif)
+
+  akan_boya.ttf · Rubik Wet Paint · SIL OFL 1.1 · Copyright 2020 The Rubik Filtered Project Authors (https://https://github.com/NaN-xyz/Rubik-Filtered)
+  askeri.ttf · Black Ops One · SIL OFL 1.1 · Copyright 2022 The Black-Ops Project Authors (https://github.com/googlefonts/googlefonts-project-template)
+  ay_tasi.ttf · Rubik Moonrocks · SIL OFL 1.1 · Copyright 2020 The Rubik Filtered Project Authors (https://https://github.com/NaN-xyz/Rubik-Filtered)
+  balon.ttf · Rubik Bubbles · SIL OFL 1.1 · Copyright 2020 The Rubik Filtered Project Authors (https://https://github.com/NaN-xyz/Rubik-Filtered)
+  baslik.ttf · Bebas Neue · SIL OFL 1.1 · Copyright © 2010 by Dharma Type.
+  cizgi_roman.ttf · Bangers · SIL OFL 1.1 · Copyright 2010 The Bangers Project Authors (https://github.com/googlefonts/bangers)
+  daktilo.ttf · Special Elite · Apache 2.0 · Copyright (c) 2010-2011 Astigmatic (AOETI)
+  dans.ttf · Dancing Script · SIL OFL 1.1 · Copyright 2016 The Dancing Script Project Authors (https://github.com/googlefonts/DancingScript), with Reserved Font Name 'Dancing Script'.
+  eglenceli.ttf · Luckiest Guy · Apache 2.0 · Copyright (c) 2010-2011 Astigmatic (AOETI)
+  el_yazisi.ttf · Lobster · SIL OFL 1.1 · Copyright 2010 The Lobster Project Authors (https://github.com/impallari/The-Lobster-Font), with Reserved Font Name "Lobster".
+  forma.ttf · Jersey 10 · SIL OFL 1.1 · Copyright 2023 The Soft Type Project Authors (https://github.com/scfried/soft-type-jersey)
+  futuristik.ttf · Audiowide · SIL OFL 1.1 · Copyright (c) 2012, Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astigmatic.com), with Reserved Font Names "Audiowide"
+  glitch.ttf · Rubik Glitch · SIL OFL 1.1 · Copyright 2020 The Rubik Filtered Project Authors (https://https://github.com/NaN-xyz/Rubik-Filtered)
+  golgeli_3d.ttf · Bungee Shade · SIL OFL 1.1 · Copyright 2023 The Bungee Project Authors (https://github.com/djrrb/Bungee)
+  gotik.ttf · Grenze Gotisch · SIL OFL 1.1 · Copyright 2020 The Grenze Gotisch Project Authors (https://github.com/Omnibus-Type/Grenze-Gotisch)
+  hiz.ttf · Faster One · SIL OFL 1.1 · Copyright 2012 The Faster Project Authors (https://github.com/etunni/faster), with Reserved Font Name 'Faster'
+  ince_uzun.ttf · Teko · SIL OFL 1.1 · Copyright 2023 The Teko Project Authors (https://www.github.com/googlefonts/teko)
+  kalem.ttf · Kalam · SIL OFL 1.1 · Copyright (c) 2014, Indian Type Foundry (info@indiantypefoundry.com).
+  korku.ttf · Nosifer · SIL OFL 1.1 · Copyright (c) 2011, Typomondo,
+  korsan.ttf · Pirata One · SIL OFL 1.1 · Copyright (c) 2012, Rodrigo Fuenzalida, Nicolas Massi (www.taip.com.ar / abc.taip.com.ar), with Reserved Font Name 'Pirata'
+  kraliyet.ttf · Cinzel · SIL OFL 1.1 · Copyright 2020 The Cinzel Project Authors (https://github.com/NDISCOVER/Cinzel)
+  led.ttf · Handjet · SIL OFL 1.1 · Copyright 2018 The Handjet Project Authors (https://github.com/rosettatype/Handjet/)
+  mini_piksel.ttf · Micro 5 · SIL OFL 1.1 · Copyright 2023 The Soft Type Project Authors (https://github.com/scfried/soft-type-micro)
+  minik.ttf · Tiny5 · SIL OFL 1.1 · Copyright 2022-2024 The Tiny5 Project Authors (https://github.com/Gissio/font_tiny5)
+  modern.ttf · Kanit · SIL OFL 1.1 · Copyright 2020 The Kanit Project Authors (https://github.com/cadsondemak/kanit)
+  neon_cizgi.ttf · Monoton · SIL OFL 1.1 · Copyright (c) 2011 by vernon adams (vern@newtypography.co.uk),
+  nokta_matris.ttf · Doto · SIL OFL 1.1 · Copyright 2024 The Doto Project Authors (https://github.com/oliverlalan/Doto)
+  not_defteri.ttf · Caveat · SIL OFL 1.1 · Copyright 2014 The Caveat Project Authors (https://github.com/googlefonts/caveat)
+  oyuncu.ttf · Exo 2 · SIL OFL 1.1 · Copyright 2013 The Exo 2 Project Authors (https://github.com/googlefonts/Exo-2.0)
+  piksel.ttf · Pixelify Sans · SIL OFL 1.1 · Copyright 2021 The Pixelify Sans Project Authors (https://github.com/eifetx/Pixelify-Sans)
+  plaj.ttf · Pacifico · SIL OFL 1.1 · Copyright 2018 The Pacifico Project Authors (https://github.com/googlefonts/Pacifico)
+  retro.ttf · Righteous · SIL OFL 1.1 · Copyright (c) 2011 by Brian J. Bonislawsky DBA Astigmatic (AOETI)
+  retro_oyun.ttf · Press Start 2P · SIL OFL 1.1 · Copyright 2012 The Press Start 2P Project Authors (cody@zone38.net), with Reserved Font Name "Press Start 2P".
+  sablon.ttf · Saira Stencil One · SIL OFL 1.1 · Copyright 2019 The Saira Stencil Project Authors (https://github.com/Omnibus-Type/Saira/SairaStencil)
+  sevimli.ttf · Cherry Bomb One · SIL OFL 1.1 · Copyright 2019 The Cherry Bomb Project Authors (https://github.com/satsuyako/CherryBomb)
+  siber.ttf · Oxanium · SIL OFL 1.1 · Copyright 2019 The Oxanium Project Authors (https://github.com/sevmeyer/oxanium)
+  spor.ttf · Russo One · SIL OFL 1.1 · Copyright (c) 2011-2012, Jovanny Lemonad (jovanny.ru), with Reserved Font Name "Russo"
+  tabela.ttf · Bungee · SIL OFL 1.1 · Copyright 2023 The Bungee Project Authors (https://github.com/djrrb/Bungee)
+  teknoloji.ttf · Chakra Petch · SIL OFL 1.1 · Copyright 2018 The Chakra Petch Project Authors (https://github.com/m4rc1e/Chakra-Petch.git)
+  terminal.ttf · VT323 · SIL OFL 1.1 · Copyright 2011, The VT323 Project Authors (peter.hull@oikoi.com)
+  yumusak.ttf · Comfortaa · SIL OFL 1.1 · Copyright 2011 The Comfortaa Project Authors (https://github.com/alexeiva/comfortaa), with Reserved Font Name "Comfortaa".
+  zarif.ttf · Great Vibes · SIL OFL 1.1 · Copyright 2015 The Great Vibes Pro Project Authors (https://github.com/googlefonts/great-vibes)
+  canavar.ttf · Rubik Beastly · SIL OFL 1.1 · Copyright 2020 The Rubik Filtered Project Authors (https://github.com/NaN-xyz/Rubik-Filtered)
+  golcuk.ttf · Rubik Puddles · SIL OFL 1.1 · Copyright 2020 The Rubik Filtered Project Authors (https://github.com/NaN-xyz/Rubik-Filtered)
+  plak.ttf · Rubik Vinyl · SIL OFL 1.1 · Copyright 2020 The Rubik Filtered Project Authors (https://github.com/NaN-xyz/Rubik-Filtered)
+  labirent.ttf · Rubik Maze · SIL OFL 1.1 · Copyright 2020 The Rubik Filtered Project Authors (https://github.com/NaN-xyz/Rubik-Filtered)
