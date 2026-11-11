@@ -119,7 +119,7 @@ public final class EffectScreen extends Screen {
     @Override
     public void render(GuiGraphics g, int mouseX, int mouseY, float partialTick) {
         super.render(g, mouseX, mouseY, partialTick);
-        g.drawCenteredString(font, "§5§lJestronPriv §7- Öldürme Efektleri", width / 2, 8, 0xFFFFFF);
+        g.drawCenteredString(font, "§5§lEfekt Menüsü §7- Öldürme Efektleri", width / 2, 8, 0xFFFFFF);
         g.drawCenteredString(font, "§7Sol tık: §fSeç   §7Sağ tık: §fÖnizle   §7Tekerlek: §fKaydır   §7Esc: §fGeri", width / 2, 18, 0xFFFFFF);
 
         String sel = mod.config().effect;
@@ -188,7 +188,7 @@ public final class EffectScreen extends Screen {
                 dirty = true;
                 refresh();
                 if (minecraft != null && minecraft.player != null) {
-                    minecraft.player.displayClientMessage(Component.literal("§8[§5JestronPriv§8] §aEfekt seçildi: " + e.displayName()), true);
+                    minecraft.player.displayClientMessage(Component.literal("§8[§5Efekt Menüsü§8] §aEfekt seçildi: " + e.displayName()), true);
                 }
                 return true;
             }

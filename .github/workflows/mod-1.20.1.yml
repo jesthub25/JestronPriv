@@ -57,7 +57,7 @@ jobs:
         run: |
           v=${{ steps.ver.outputs.short }}
           bash .github/scripts/yayinla.sh fabric-1.20.1 "mod-1.20.1-v$v" \
-            "JestronPriv Mod $v — Minecraft 1.20.1 (Fabric)" \
+            "Efekt Menüsü (JestronPriv) $v — Minecraft 1.20.1 (Fabric)" \
             "${{ steps.ver.outputs.jar }}" "JestronPriv-Mod-$v-mc1.20.1" "$v" \
             "**İstemci modu** · Minecraft 1.20.1 · Fabric Loader 0.16.9+ · Fabric API 0.92+ gerekli · Java 17+. Kurulum: jar dosyasını \`.minecraft/mods\` klasörüne koy (eskisini sil). Kaynak kod: \`-kaynak.zip\`." \
             false

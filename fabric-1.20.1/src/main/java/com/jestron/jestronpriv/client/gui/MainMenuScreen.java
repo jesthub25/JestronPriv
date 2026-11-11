@@ -63,7 +63,7 @@ public final class MainMenuScreen extends Screen implements JpThemed {
     }
 
     private MainMenuScreen(Screen parent, Cat category) {
-        super(Component.literal(category == null ? "JestronPriv" : "JestronPriv · " + category.label));
+        super(Component.literal(category == null ? "Efekt Menüsü" : "Efekt Menüsü · " + category.label));
         this.mod = JestronPrivClient.get();
         this.parent = parent;
         this.category = category;
