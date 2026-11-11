@@ -1,0 +1,18 @@
+{
+ "providers": [
+  {
+   "type": "ttf",
+   "file": "jestronpriv:korsan.ttf",
+   "size": 9.08,
+   "oversample": 4.0,
+   "shift": [
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "type": "reference",
+   "id": "minecraft:default"
+  }
+ ]
+}

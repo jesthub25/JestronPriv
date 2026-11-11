@@ -1,0 +1,18 @@
+{
+ "providers": [
+  {
+   "type": "ttf",
+   "file": "jestronpriv:piksel.ttf",
+   "size": 11.05,
+   "oversample": 4.0,
+   "shift": [
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "type": "reference",
+   "id": "minecraft:default"
+  }
+ ]
+}

@@ -1,0 +1,25 @@
+name: JestronPriv-Sunucu
+version: '${version}'
+main: com.jestron.jestronpriv.sunucu.JestronSunucu
+api-version: '1.20'
+author: jesthub25
+description: JestronPriv aura ve elytra izi efektleri, sunucu tarafinda (modsuz oyuncular da gorur).
+softdepend: [SuperVanish, PremiumVanish, Essentials]
+commands:
+  jestron:
+    description: JestronPriv efekt menusu ve komutlari
+    usage: /<command> [menu|aura|elytra|gizle|ayar|kapat|liste|ver|yenile]
+    aliases: [jp, jestronpriv]
+permissions:
+  jestronpriv.use:
+    description: Menuyu ve kendi aura / elytra izini kullanma
+    default: true
+  jestronpriv.admin:
+    description: /jestron ver ve /jestron yenile
+    default: op
+  jestronpriv.aura.*:
+    description: (her-oge-icin-izin acikken) tum auralar
+    default: op
+  jestronpriv.elytra.*:
+    description: (her-oge-icin-izin acikken) tum elytra izleri
+    default: op

@@ -1,0 +1,28 @@
+# JestronPriv Sunucu ayarlari. Degistirdikten sonra: /jestron yenile
+
+# Efektleri kac blok uzaktaki oyuncular gorur (8 - 128).
+gorus-mesafesi: 48
+
+# Bir oyuncuya tick basina gonderilebilecek en fazla parcacik (20 - 5000).
+# Kalabalik sunucuda dusur; istemcilerin ve agin rahat etmesini saglar.
+parcacik-limiti: 600
+
+# Parcacik yogunlugu (0.1 - 2.0). 1 = moddaki varsayilan.
+yogunluk: 1.0
+
+# Desenlerin yayilma genisligi (0.5 - 2.5).
+yayilim: 1.0
+
+# Ozellikleri tamamen ac / kapat.
+auralar: true
+elytra-izleri: true
+
+# true: her aura / iz icin ayri izin gerekir
+#   jestronpriv.aura.<kimlik>   ornek: jestronpriv.aura.ates_halkasi
+#   jestronpriv.elytra.<kimlik> ornek: jestronpriv.elytra.anka
+#   (hepsi icin jestronpriv.aura.* / jestronpriv.elytra.*)
+# false: jestronpriv.use izni olan herkes hepsini kullanir.
+her-oge-icin-izin: false
+
+# Efektlerin hic gosterilmeyecegi dunyalar (buyuk/kucuk harf fark etmez).
+kapali-dunyalar: []

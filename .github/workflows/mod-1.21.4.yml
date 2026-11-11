@@ -1,0 +1,61 @@
+name: Mod 1.21.4 (Fabric)
+
+# fabric-1.21.4 klasoru degisince: mod derlenir; jar + kaynak zip "mod-1.21.4-v<surum>" release'ine konur.
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'fabric-1.21.4/**'
+      - '.github/workflows/mod-1.21.4.yml'
+      - '.github/scripts/yayinla.sh'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: mod-1.21.4
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: fabric-1.21.4
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+
+      - uses: gradle/actions/setup-gradle@v4
+
+      - name: Derle
+        run: |
+          chmod +x gradlew
+          ./gradlew build --no-daemon --stacktrace
+
+      - name: Sürümü oku
+        id: ver
+        run: |
+          full=$(grep '^mod_version=' gradle.properties | cut -d= -f2 | tr -d '\r')
+          short=${full%%+*}
+          jar=$(ls build/libs/*.jar | grep -v -- '-sources' | head -1)
+          echo "short=$short" >> "$GITHUB_OUTPUT"
+          echo "jar=fabric-1.21.4/$jar" >> "$GITHUB_OUTPUT"
+          echo "Sürüm: $full  Jar: $jar"
+
+      - name: Release oluştur / güncelle
+        working-directory: .
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          v=${{ steps.ver.outputs.short }}
+          bash .github/scripts/yayinla.sh fabric-1.21.4 "mod-1.21.4-v$v" \
+            "JestronPriv Mod $v — Minecraft 1.21.4 (Fabric)" \
+            "${{ steps.ver.outputs.jar }}" "JestronPriv-Mod-$v-mc1.21.4" "$v" \
+            "**İstemci modu** · Minecraft 1.21.4 · Fabric Loader 0.16.9+ · Fabric API gerekli. Kurulum: jar dosyasını \`.minecraft/mods\` klasörüne koy (eskisini sil). Kaynak kod: \`-kaynak.zip\`." \
+            true

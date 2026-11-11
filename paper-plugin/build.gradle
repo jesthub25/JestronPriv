@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.jestron'
+version = project.plugin_version
+base.archivesName = 'JestronPriv-Sunucu'
+
+repositories {
+    mavenCentral()
+    maven { url = 'https://repo.papermc.io/repository/maven-public/' }
+}
+
+dependencies {
+    // En eski desteklenen surume gore derlenir: tek jar 1.20.1 - 1.21.x arasi calisir
+    compileOnly 'io.papermc.paper:paper-api:1.20.1-R0.1-SNAPSHOT'
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+    options.release = 17
+}
+
+processResources {
+    inputs.property 'version', project.version
+    filteringCharset = 'UTF-8'
+    filesMatching('plugin.yml') {
+        expand 'version': project.version
+    }
+}
