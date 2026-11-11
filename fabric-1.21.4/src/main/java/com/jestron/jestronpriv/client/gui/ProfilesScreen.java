@@ -107,7 +107,7 @@ public final class ProfilesScreen extends JpScreen {
             }
             Profile p = ConfigProfiles.fromCode(clip);
             if (p == null) {
-                flash("§cPanoda geçerli bir JestronPriv kodu yok");
+                flash("§cPanoda geçerli bir Efekt Menüsü kodu yok");
                 return;
             }
             importProfile(p);

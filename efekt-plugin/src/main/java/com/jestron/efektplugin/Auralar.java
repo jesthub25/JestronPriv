@@ -1,9 +1,9 @@
-package com.jestron.jestronpriv.sunucu;
+package com.jestron.efektplugin;
 
 import java.util.List;
 
 /**
- * 50 aura: JestronPriv modundaki auralarin sunucu karsiligi. Desenler moddakiyle ayni koddur; parcaciklar sunucuda
+ * 50 aura: Efekt Menusu modundaki (Jestron) auralarin sunucu karsiligi. Desenler moddakiyle ayni koddur; parcaciklar sunucuda
  * olusur ve modsuz oyuncular dahil herkes gorur.
  */
 public final class Auralar {

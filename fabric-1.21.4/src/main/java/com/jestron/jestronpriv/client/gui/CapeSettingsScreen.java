@@ -77,7 +77,7 @@ public final class CapeSettingsScreen extends JpScreen {
         toggle("Parçacık", "Bazı desenlerin alt kenarından stile uygun parçacık (alev, kar, yaprak...).", () -> c.capeParticles, v -> c.capeParticles = v);
         slider("Parçacık miktarı", "Vanilla 'Parçacıklar' ayarına da uyar.", 0, 3, 0.1, () -> c.capeParticleRate, v -> c.capeParticleRate = (float) v,
                 v -> v < 0.01 ? "yok" : mul(v));
-        toggle("Kanatla gizle", "JestronPriv kanatları görünürken pelerini gizle (iç içe geçmesin).\nElytra giyince her zaman gizlenir (vanilla gibi).",
+        toggle("Kanatla gizle", "Efekt Menüsü kanatları görünürken pelerini gizle (iç içe geçmesin).\nElytra giyince her zaman gizlenir (vanilla gibi).",
                 () -> c.capeHideWings, v -> c.capeHideWings = v);
     }
 }

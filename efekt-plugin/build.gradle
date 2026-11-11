@@ -4,7 +4,7 @@ plugins {
 
 group = 'com.jestron'
 version = project.plugin_version
-base.archivesName = 'JestronPriv-Sunucu'
+base.archivesName = 'EfektPlugin'
 
 repositories {
     mavenCentral()

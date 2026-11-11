@@ -123,12 +123,12 @@ public final class Theme {
         ThemePainter.scrollbar(canvas(g), current(), x, y0, y1, barY, barH, opacity());
     }
 
-    /** "JestronPriv » " basligi tema rengiyle. */
+    /** "Efekt Menüsü » " basligi tema rengiyle. */
     public static MutableComponent title(Component rest) {
         GuiTheme t = current();
-        // kok bos: kalin stil sadece "JestronPriv" yazisinda kalsin (alt parcalar ust stili miras alir)
+        // kok bos: kalin stil sadece "Efekt Menüsü" yazisinda kalsin (alt parcalar ust stili miras alir)
         MutableComponent c = Component.empty();
-        c.append(Component.literal("JestronPriv").withStyle(ChatFormatting.BOLD).withColor(ThemePainter.titleColor(t)));
+        c.append(Component.literal("Efekt Menüsü").withStyle(ChatFormatting.BOLD).withColor(ThemePainter.titleColor(t)));
         if (rest != null) {
             c.append(Component.literal(" » ").withColor(0x555555));
             c.append(rest.copy().withColor(0xFFFFFF));

@@ -256,7 +256,7 @@ public final class JestronPrivClient implements ClientModInitializer {
             config.freeCam = !config.freeCam;
             config.save();
             mc.player.displayClientMessage(net.minecraft.network.chat.Component.literal(
-                    "§5JestronPriv §8» §fSerbest kamera: " + (config.freeCam ? "§aAçık" : "§cKapalı")), true);
+                    "§5Efekt Menüsü §8» §fSerbest kamera: " + (config.freeCam ? "§aAçık" : "§cKapalı")), true);
         }
         if (openMenuNextTick) {
             openMenuNextTick = false;
@@ -420,7 +420,7 @@ public final class JestronPrivClient implements ClientModInitializer {
 
     private void msg(String s) {
         LocalPlayer p = Minecraft.getInstance().player;
-        if (p != null) p.displayClientMessage(Component.literal("§8[§5JestronPriv§8] §r" + s), false);
+        if (p != null) p.displayClientMessage(Component.literal("§8[§5Efekt Menüsü§8] §r" + s), false);
     }
 
     private void registerCommands(CommandDispatcher<FabricClientCommandSource> d) {

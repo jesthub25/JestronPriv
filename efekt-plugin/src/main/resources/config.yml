@@ -1,4 +1,4 @@
-# JestronPriv Sunucu ayarlari. Degistirdikten sonra: /jestron yenile
+# EfektPlugin ayarlari (Jestron). Degistirdikten sonra: /efektyenile
 
 # Efektleri kac blok uzaktaki oyuncular gorur (8 - 128).
 gorus-mesafesi: 48
@@ -18,10 +18,10 @@ auralar: true
 elytra-izleri: true
 
 # true: her aura / iz icin ayri izin gerekir
-#   jestronpriv.aura.<kimlik>   ornek: jestronpriv.aura.ates_halkasi
-#   jestronpriv.elytra.<kimlik> ornek: jestronpriv.elytra.anka
-#   (hepsi icin jestronpriv.aura.* / jestronpriv.elytra.*)
-# false: jestronpriv.use izni olan herkes hepsini kullanir.
+#   efektplugin.aura.<kimlik>   ornek: efektplugin.aura.ates_halkasi
+#   efektplugin.elytra.<kimlik> ornek: efektplugin.elytra.anka
+#   (hepsi icin efektplugin.aura.* / efektplugin.elytra.*)
+# false: efektplugin.use izni olan herkes hepsini kullanir.
 her-oge-icin-izin: false
 
 # Efektlerin hic gosterilmeyecegi dunyalar (buyuk/kucuk harf fark etmez).

@@ -1,0 +1,51 @@
+name: EfektPlugin
+version: '${version}'
+main: com.jestron.efektplugin.EfektPlugin
+api-version: '1.20'
+author: Jestron
+authors: [Jestron]
+description: 50 aura ve 50 elytra izi efekti, sunucu tarafinda (modsuz oyuncular da gorur).
+softdepend: [SuperVanish, PremiumVanish, Essentials]
+commands:
+  efekt:
+    description: Efekt menusunu acar
+    usage: /<command>
+    aliases: [efektler]
+  aura:
+    description: Aura secer ya da kapatir
+    usage: /<command> [ad|kapat]
+  elytra:
+    description: Elytra izi secer ya da kapatir
+    usage: /<command> [ad|kapat]
+    aliases: [elytraiz]
+  efektgizle:
+    description: Baskalarinin efektlerini gizler / gosterir
+    usage: /<command>
+  efektayar:
+    description: Gorunurluk ve hiz ayarlari
+    usage: /<command>
+  efektkapat:
+    description: Aurayi ve elytra izini kapatir
+    usage: /<command>
+  efektliste:
+    description: Aura / elytra izi kimliklerini listeler
+    usage: /<command> [aura|elytra]
+  efektver:
+    description: (yonetici) Baska oyuncuya aura / iz ayarlar
+    usage: /<command> <oyuncu> <aura|elytra> <ad|kapat>
+  efektyenile:
+    description: (yonetici) config.yml'i yeniden okur
+    usage: /<command>
+permissions:
+  efektplugin.use:
+    description: Menu ve kendi aura / elytra izin
+    default: true
+  efektplugin.admin:
+    description: /efektver ve /efektyenile
+    default: op
+  efektplugin.aura.*:
+    description: (her-oge-icin-izin acikken) tum auralar
+    default: op
+  efektplugin.elytra.*:
+    description: (her-oge-icin-izin acikken) tum elytra izleri
+    default: op
