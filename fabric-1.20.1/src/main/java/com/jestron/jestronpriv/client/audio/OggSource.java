@@ -1,6 +1,6 @@
 package com.jestron.jestronpriv.client.audio;
 
-import net.minecraft.client.sounds.OggAudioStream;
+import com.mojang.blaze3d.audio.OggAudioStream;
 import org.jcodec.common.AudioFormat;
 
 import java.io.BufferedInputStream;
