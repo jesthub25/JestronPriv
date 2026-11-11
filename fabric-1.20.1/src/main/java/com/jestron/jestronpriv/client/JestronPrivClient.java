@@ -29,7 +29,6 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.component.ResolvableProfile;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.HitResult;
@@ -385,7 +384,7 @@ public final class JestronPrivClient implements ClientModInitializer {
 
     private static com.jestron.jestronpriv.fx.api.ItemStack headOf(Entity victim) {
         if (victim instanceof Player p) {
-            return new com.jestron.jestronpriv.fx.api.ItemStack(Material.PLAYER_HEAD, new ResolvableProfile(p.getGameProfile()));
+            return new com.jestron.jestronpriv.fx.api.ItemStack(Material.PLAYER_HEAD, p.getGameProfile());
         }
         if (victim != null) {
             EntityType<?> t = victim.getType();

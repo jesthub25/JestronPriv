@@ -6,7 +6,6 @@ import net.minecraft.Util;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.ClientPacketListener;
 import net.minecraft.client.multiplayer.PlayerInfo;
-import net.minecraft.network.protocol.ping.ServerboundPingRequestPacket;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 
@@ -51,10 +50,8 @@ public final class PingTracker {
         if (!c.pingHud && !(c.infoHud)) return;
         long now = Util.getMillis();
         long interval = Math.round(Math.max(0.5f, Math.min(5f, c.pingInterval)) * 1000f);
-        if (now - lastSend >= interval) {
-            lastSend = now;
-            con.send(new ServerboundPingRequestPacket(now));
-        }
+        // 1.20.1'de oyun icinde ping paketi yok (1.20.2 ile geldi): sekme listesindeki deger kullanilir
+        if (now - lastSend >= interval) lastSend = now;
         // nisan alinan oyuncu rakip olarak hatirlanir
         if (mc.crosshairPickEntity instanceof Player pl && pl != mc.player) setTarget(pl);
     }

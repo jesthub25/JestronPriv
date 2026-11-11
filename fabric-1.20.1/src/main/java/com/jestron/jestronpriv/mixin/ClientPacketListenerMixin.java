@@ -48,15 +48,6 @@ public abstract class ClientPacketListenerMixin {
         }
     }
 
-    /** Ping yaniti (ag thread'inde gelir; PingTracker kilitli calisir). */
-    @Inject(method = "handlePongResponse", at = @At("HEAD"))
-    private void jestronpriv$pong(net.minecraft.network.protocol.ping.ClientboundPongResponsePacket packet, CallbackInfo ci) {
-        try {
-            com.jestron.jestronpriv.client.pvp.PingTracker.onPong(packet.time());
-        } catch (Throwable ignored) {
-        }
-    }
-
     /** Yerden alinan esya (sunucu paketi, tam adet). Ana is parcacigindaki ikinci cagrida calisir. */
     @Inject(method = "handleTakeItemEntity", at = @At("HEAD"))
     private void jestronpriv$take(net.minecraft.network.protocol.game.ClientboundTakeItemEntityPacket packet, CallbackInfo ci) {

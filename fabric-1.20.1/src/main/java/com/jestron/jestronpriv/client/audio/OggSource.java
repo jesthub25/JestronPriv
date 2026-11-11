@@ -1,6 +1,6 @@
 package com.jestron.jestronpriv.client.audio;
 
-import net.minecraft.client.sounds.JOrbisAudioStream;
+import net.minecraft.client.sounds.OggAudioStream;
 import org.jcodec.common.AudioFormat;
 
 import java.io.BufferedInputStream;
@@ -11,14 +11,14 @@ import java.nio.ByteOrder;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
-/** OGG Vorbis: oyunun kendi cozucusu (JOrbis) ile. */
+/** OGG Vorbis: oyunun kendi cozucusu (OggAudioStream) ile. */
 final class OggSource {
 
     private OggSource() {
     }
 
     static AudioDecoder.Pcm decode(Path file, double max) throws IOException {
-        try (InputStream in = new BufferedInputStream(Files.newInputStream(file)); JOrbisAudioStream s = new JOrbisAudioStream(in)) {
+        try (InputStream in = new BufferedInputStream(Files.newInputStream(file)); OggAudioStream s = new OggAudioStream(in)) {
             javax.sound.sampled.AudioFormat jf = s.getFormat();
             int ch = Math.max(1, jf.getChannels());
             AudioFormat f = new AudioFormat(Math.round(jf.getSampleRate()), 16, ch, true, ByteOrder.nativeOrder() == ByteOrder.BIG_ENDIAN);

@@ -20,14 +20,13 @@ import net.minecraft.client.renderer.entity.layers.RenderLayer;
 import net.minecraft.client.renderer.entity.state.PlayerRenderState;
 import net.minecraft.client.renderer.texture.DynamicTexture;
 import net.minecraft.client.renderer.texture.OverlayTexture;
-import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.particles.DustParticleOptions;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleType;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.server.level.ParticleStatus;
+import net.minecraft.client.ParticleStatus;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.phys.Vec3;
@@ -120,7 +119,7 @@ public final class Capes {
     }
 
     private static boolean glider(ItemStack chest) {
-        return chest != null && !chest.isEmpty() && chest.has(DataComponents.GLIDER);
+        return chest != null && !chest.isEmpty() && chest.getItem() instanceof net.minecraft.world.item.ElytraItem;
     }
 
     private static void advanceClocks(ModConfig c) {

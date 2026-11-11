@@ -4,7 +4,6 @@ import com.jestron.jestronpriv.client.ModConfig;
 import com.jestron.jestronpriv.client.look.Glint;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.Screen;
-import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -23,7 +22,8 @@ public final class GlintScreen extends JpScreen {
                 new ItemStack(Items.TRIDENT), new ItemStack(Items.DIAMOND_CHESTPLATE), new ItemStack(Items.BOOK)};
         for (ItemStack st : s) {
             try {
-                st.set(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true);
+                // 1.20.1: parlama icin gercek bir buyu (onizleme esyasi, oyuna gitmez)
+                st.enchant(net.minecraft.world.item.enchantment.Enchantments.UNBREAKING, 1);
             } catch (Throwable ignored) {
             }
         }

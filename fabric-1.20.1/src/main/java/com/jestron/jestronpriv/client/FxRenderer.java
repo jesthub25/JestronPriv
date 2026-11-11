@@ -16,12 +16,10 @@ import net.minecraft.client.renderer.LevelRenderer;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.component.ResolvableProfile;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.client.renderer.culling.Frustum;
@@ -59,7 +57,8 @@ public final class FxRenderer {
     private ItemStack toVanilla(com.jestron.jestronpriv.fx.api.ItemStack s) {
         return itemCache.computeIfAbsent(s, k -> {
             ItemStack it = new ItemStack(BuiltInRegistries.ITEM.get(new ResourceLocation(k.getType().id())));
-            if (k.profile() instanceof ResolvableProfile rp) it.set(DataComponents.PROFILE, rp);
+            if (k.profile() instanceof com.mojang.authlib.GameProfile gp)
+                it.getOrCreateTag().put("SkullOwner", net.minecraft.nbt.NbtUtils.writeGameProfile(new net.minecraft.nbt.CompoundTag(), gp));
             return it;
         });
     }
