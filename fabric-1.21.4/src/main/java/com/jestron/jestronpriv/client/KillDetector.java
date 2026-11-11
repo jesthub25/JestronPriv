@@ -367,7 +367,7 @@ public final class KillDetector {
 
     private void note(String s) {
         Minecraft mc = Minecraft.getInstance();
-        if (mc.player != null) mc.player.displayClientMessage(Component.literal("§8[§5JestronPriv§8] " + s), false);
+        if (mc.player != null) mc.player.displayClientMessage(Component.literal("§8[§5Efekt Menüsü§8] " + s), false);
     }
 
     private void fire(Entity victim, String name, Vec3 pos, String source) {

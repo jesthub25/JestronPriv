@@ -47,7 +47,7 @@ public final class ThemeScreen extends JpScreen {
     protected void buildOptions() {
         ModConfig c = cfg();
         header("Tema");
-        cycle("Tema", "Tıkla: sonraki · Shift+tık: önceki.\nTüm JestronPriv menüleri anında bu temaya geçer.", () -> "§f" + Theme.current().name(), () -> {
+        cycle("Tema", "Tıkla: sonraki · Shift+tık: önceki.\nTüm Efekt Menüsü ekranları anında bu temaya geçer.", () -> "§f" + Theme.current().name(), () -> {
             c.menuTheme = GuiTheme.next(c.menuTheme, hasShiftDown()).id();
             rebuild = true;
         });

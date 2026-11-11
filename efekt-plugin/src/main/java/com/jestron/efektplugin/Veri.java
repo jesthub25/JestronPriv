@@ -1,4 +1,4 @@
-package com.jestron.jestronpriv.sunucu;
+package com.jestron.efektplugin;
 
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.InvalidConfigurationException;
@@ -48,7 +48,7 @@ public final class Veri {
     private final File file;
     private final Map<UUID, Secim> map = new HashMap<>();
     private final ExecutorService yazici = Executors.newSingleThreadExecutor(r -> {
-        Thread t = new Thread(r, "JestronPriv-Kayit");
+        Thread t = new Thread(r, "EfektPlugin-Kayit");
         t.setDaemon(true);
         return t;
     });

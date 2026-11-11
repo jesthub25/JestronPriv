@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "jestronpriv",
   "version": "${version}",
-  "name": "JestronPriv",
+  "name": "Efekt Menüsü",
   "description": "50 animasyonlu elytra görünümü + Eşya görünümü editörü (kendin çiz — kalıp rehberi ve kare kare animasyonla —, PNG / GIF ya da kaynak paketinden yükle) + Doku Kütüphanesi (her paketten istediğin doku, mod klasöründe hazır dokular), 10 şeffaf menü teması, her şeyi kapsayan profil paylaşımı, 50 animasyonlu pelerin (kumaş fiziği), büyü parlaması rengi, özel gökyüzü (kutup ışığı, kayan yıldız, gün batımı, ay), sis rengi / mesafesi, kategorili menü, reach göstergesi, anlık ping, öldürme akışı, totem bildirimleri, özel hitbox, ayar profilleri (kaydet / yükle / kodla paylaş), 50 animasyonlu şapka, özel isim etiketi (50 font, 3944 emoji, kendi PNG / JPG / GIF görselin), 50 öldürme efekti (özel yazı dahil), 51 animasyonlu kanat, 50 aura, 50 vuruş / kritik partikülü, 50 vuruş stili, 50 yoldaş, 50 nişangah, 50 renk filtresi, hasar sayıları, kombo sayacı, seri öldürme duyurusu, vurulma rengi, özel nişangah, totem animasyonu + sayacı + cihazından özel totem sesi (MP4 / M4A / MOV / MP3 / WAV / OGG), istemci saat / hava, sürükle-bırak HUD (iksir, eşya sayacı, bilgi, envanter, alınan / atılan), yerdeki eşya etiketleri, evcil yoldaş, özel seçim kutusu, FOV ayarı, varlık ayıklama, serbest 3. şahıs kamera, el görünümü (viewmodel), ekran renk / oran / zoom ayarları ve kesin öldürme doğrulaması. Sadece istemci; her sunucuda çalışır.",
   "authors": [
     "Jestron"

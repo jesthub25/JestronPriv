@@ -1,4 +1,4 @@
-package com.jestron.jestronpriv.sunucu;
+package com.jestron.efektplugin;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -48,11 +48,11 @@ public final class Menuler implements Listener {
     }
 
     private static final int SAYFA = 45;
-    private final JestronSunucu plugin;
+    private final EfektPlugin plugin;
     private Enchantment parilti;
     private boolean parlaktiBakildi;
 
-    Menuler(JestronSunucu plugin) {
+    Menuler(EfektPlugin plugin) {
         this.plugin = plugin;
     }
 
@@ -60,7 +60,7 @@ public final class Menuler implements Listener {
 
     public void ana(Player p) {
         Holder h = new Holder(Tur.ANA, 0);
-        Inventory inv = Bukkit.createInventory(h, 27, "§5✦ JestronPriv");
+        Inventory inv = Bukkit.createInventory(h, 27, "§5✦ Efektler");
         h.inv = inv;
         cerceve(inv);
         Veri.Secim s = plugin.veri().bul(p.getUniqueId());

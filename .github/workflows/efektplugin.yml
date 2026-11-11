@@ -1,12 +1,12 @@
-name: Sunucu Eklentisi (Paper / Spigot)
+name: EfektPlugin (Paper / Spigot)
 
-# paper-plugin klasoru degisince: eklenti derlenir; jar + kaynak zip "eklenti-v<surum>" release'ine konur.
+# efekt-plugin klasoru degisince: eklenti derlenir; jar + kaynak zip "efektplugin-v<surum>" release'ine konur.
 on:
   push:
     branches: [main]
     paths:
-      - 'paper-plugin/**'
-      - '.github/workflows/eklenti.yml'
+      - 'efekt-plugin/**'
+      - '.github/workflows/efektplugin.yml'
       - '.github/scripts/yayinla.sh'
   workflow_dispatch:
 
@@ -14,7 +14,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: eklenti
+  group: efektplugin
   cancel-in-progress: false
 
 jobs:
@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: paper-plugin
+        working-directory: efekt-plugin
     steps:
       - uses: actions/checkout@v4
 
@@ -42,11 +42,11 @@ jobs:
         id: ver
         run: |
           v=$(grep '^plugin_version=' gradle.properties | cut -d= -f2 | tr -d '\r')
-          jar=build/libs/JestronPriv-Sunucu-$v.jar
+          jar=build/libs/EfektPlugin-$v.jar
           test -f "$jar"
           unzip -p "$jar" plugin.yml | grep -q "^version: '$v'"
           echo "v=$v" >> "$GITHUB_OUTPUT"
-          echo "jar=paper-plugin/$jar" >> "$GITHUB_OUTPUT"
+          echo "jar=efekt-plugin/$jar" >> "$GITHUB_OUTPUT"
           echo "Sürüm: $v  Jar: $jar"
 
       - name: Release oluştur / güncelle
@@ -55,8 +55,8 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           v=${{ steps.ver.outputs.v }}
-          bash .github/scripts/yayinla.sh paper-plugin "eklenti-v$v" \
-            "JestronPriv Sunucu Eklentisi $v — Paper / Spigot 1.20.1 – 1.21.4" \
-            "${{ steps.ver.outputs.jar }}" "JestronPriv-Sunucu-$v" "$v" \
-            "**Sunucu eklentisi** · Paper / Purpur / Spigot 1.20.1 – 1.21.4 · Java 17+. Kurulum: jar dosyasını sunucunun \`plugins\` klasörüne koy, sunucuyu yeniden başlat. Modsuz oyuncular da efektleri görür. Kaynak kod: \`-kaynak.zip\`." \
+          bash .github/scripts/yayinla.sh efekt-plugin "efektplugin-v$v" \
+            "EfektPlugin $v — Paper / Spigot 1.20.1 – 1.21.4" \
+            "${{ steps.ver.outputs.jar }}" "EfektPlugin-$v" "$v" \
+            "**Sunucu eklentisi** · Paper / Purpur / Spigot 1.20.1 – 1.21.4 · Java 17+. Kurulum: jar dosyasını sunucunun \`plugins\` klasörüne koy, sunucuyu yeniden başlat. Modsuz oyuncular da efektleri görür. Komutlar: /efekt, /aura, /elytra. Kaynak kod: \`-kaynak.zip\`." \
             false

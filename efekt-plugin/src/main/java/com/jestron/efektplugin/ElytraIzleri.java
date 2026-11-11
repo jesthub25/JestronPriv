@@ -1,9 +1,9 @@
-package com.jestron.jestronpriv.sunucu;
+package com.jestron.efektplugin;
 
 import java.util.List;
 
 /**
- * 50 elytra izi: JestronPriv modundaki 50 elytra gorunumunun renkleri ve parcaciklariyla, suzulurken kanat
+ * 50 elytra izi: Efekt Menusu modundaki (Jestron) 50 elytra gorunumunun renkleri ve parcaciklariyla, suzulurken kanat
  * uclarindan cikan iz. Sunucuda olusur, herkes gorur (elytranin dokusu modsuz degistirilemez; iz desenin renginde).
  */
 public final class ElytraIzleri {

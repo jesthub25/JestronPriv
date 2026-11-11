@@ -1,4 +1,4 @@
-package com.jestron.jestronpriv.sunucu;
+package com.jestron.efektplugin;
 
 import org.bukkit.Color;
 import org.bukkit.Particle;

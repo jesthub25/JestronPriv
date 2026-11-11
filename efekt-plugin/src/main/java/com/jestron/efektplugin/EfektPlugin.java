@@ -1,4 +1,4 @@
-package com.jestron.jestronpriv.sunucu;
+package com.jestron.efektplugin;
 
 import org.bukkit.GameMode;
 import org.bukkit.Location;
@@ -24,12 +24,12 @@ import java.util.UUID;
 import java.util.logging.Level;
 
 /**
- * JestronPriv Sunucu: modun aura ve elytra izi efektlerini sunucu tarafinda calistirir. Parcaciklari sunucu olusturup
- * yakindaki oyunculara gonderir; modsuz (vanilla) oyuncular da gorur. Paper / Spigot / Purpur 1.20.1 - 1.21.x.
+ * EfektPlugin (Jestron): aura ve elytra izi efektlerini sunucu tarafinda calistirir. Parcaciklari sunucu olusturup
+ * yakindaki oyunculara gonderir; modsuz (vanilla) oyuncular da gorur. Paper / Spigot / Purpur 1.20.1 - 1.21.x. Yapimci: Jestron.
  */
-public final class JestronSunucu extends JavaPlugin implements Listener {
+public final class EfektPlugin extends JavaPlugin implements Listener {
 
-    static final String ONEK = "§d✦ §5JestronPriv §8» §7";
+    static final String ONEK = "§d✦ §5Efekt §8» §7";
 
     private final Partikuller partikuller = new Partikuller();
     private final Map<UUID, Durum> durum = new HashMap<>();
@@ -67,8 +67,12 @@ public final class JestronSunucu extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(this, this);
         getServer().getPluginManager().registerEvents(menuler, this);
         Komut k = new Komut(this);
-        PluginCommand c = getCommand("jestron");
-        if (c != null) {
+        for (String ad : Komut.KOMUTLAR) {
+            PluginCommand c = getCommand(ad);
+            if (c == null) {
+                getLogger().warning("plugin.yml'de komut yok: " + ad);
+                continue;
+            }
             c.setExecutor(k);
             c.setTabCompleter(k);
         }
@@ -109,7 +113,7 @@ public final class JestronSunucu extends JavaPlugin implements Listener {
 
     boolean izinli(Player p, String tur, String id) {
         if (!herOgeIzin) return true;
-        return p.hasPermission("jestronpriv." + tur + ".*") || p.hasPermission("jestronpriv." + tur + "." + id);
+        return p.hasPermission("efektplugin." + tur + ".*") || p.hasPermission("efektplugin." + tur + "." + id);
     }
 
     /** id null → kapat. Mesaj gonderilir; basarili ise true. */
