@@ -3,5 +3,12 @@
   "category.jestronpriv": "Efekt Menüsü",
   "key.jestronpriv.freecam": "Toggle Free Third-Person Camera",
   "key.jestronpriv.freelook": "Hold to Look Around (Third Person)",
-  "key.jestronpriv.zoom": "Zoom (Hold)"
+  "key.jestronpriv.zoom": "Zoom (Hold)",
+  "category.jestron": "Efekt Menüsü · Modules",
+  "key.jestron.menu": "Module menu",
+  "key.jestron.macro1": "Chat macro 1",
+  "key.jestron.macro2": "Chat macro 2",
+  "key.jestron.macro3": "Chat macro 3",
+  "key.jestron.macro4": "Chat macro 4",
+  "key.jestron.macro5": "Chat macro 5"
 }

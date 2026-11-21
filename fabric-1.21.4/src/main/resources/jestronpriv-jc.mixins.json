@@ -1,0 +1,20 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.jestron.jestronpriv.jc.mixin",
+  "plugin": "com.jestron.jestronpriv.jc.mixin.JcMixinPlugin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "ChatComponentMixin",
+    "GuiMixin",
+    "LivingEntityRendererMixin",
+    "MouseHandlerMixin",
+    "OptionInstanceAccessor",
+    "MinecraftMixin",
+    "PauseScreenAccessor",
+    "MinecraftTitleMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
