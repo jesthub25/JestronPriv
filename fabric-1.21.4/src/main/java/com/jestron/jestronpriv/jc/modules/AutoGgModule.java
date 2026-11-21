@@ -33,7 +33,7 @@ public final class AutoGgModule extends Module {
     private final Setting.Num cooldown = add(new Setting.Num("cooldown", "Bekleme süresi", 15, 3, 120, 1, " sn"));
     private final Setting.Num delay = add(new Setting.Num("delay", "Gönderme gecikmesi", 1, 0, 5, 0.5, " sn"));
     private final Setting.Bool playerChat = add(new Setting.Bool("playerChat", "Oyuncu mesajlarında da oyun sonuna bak", false));
-    private final Setting.Text extra = add(new Setting.Text("extraTriggers", "Ek oyun sonu kelimeleri (isteğe bağlı, virgülle)", "", 256));
+    private final Setting.Text extra = add(new Setting.Text("extraWords", "Ek oyun sonu kelimeleri (isteğe bağlı, virgülle)", "", 256));
 
     private long lastFired;
     private int pendingTicks = -1;

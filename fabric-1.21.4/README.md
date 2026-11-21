@@ -2,6 +2,10 @@
 
 **1.20.0** — Doku Kütüphanesi (her paketten istediğin doku, mod klasöründe hazır dokular) + eşya editöründe kalıp (rehber doku) + kare kare animasyonlu çizim + yeni araçlar; eşya görünümü editörü (kendin çiz / PNG / kaynak paketi) + 10 şeffaf menü teması + her şey profil koduyla paylaşılır + 50 animasyonlu pelerin + büyü parlaması rengi + özel gökyüzü (kutup ışığı, kayan yıldız) + sis ayarı + kategorili menü + reach / ping / öldürme akışı / totem bildirimi / hitbox + ayar profilleri (kaydet / yükle / kodla paylaş) + 50 animasyonlu şapka + özel isim etiketi (50 font, 3944 emoji, kendi PNG/JPG/GIF görselin) + 50 öldürme efekti + 51 kanat + 50 aura + 50 vuruş partikülü + 50 vuruş stili + 50 yoldaş + 50 nişangah + 50 renk filtresi + PvP hissi + özel nişangah + totem (cihazından **özel totem sesi**) + saat / hava + sürükle-bırak HUD (iksir, eşya sayacı, bilgi, envanter, alınan / atılan, kombo, seri duyurusu) + yerdeki eşya etiketleri + özel seçim kutusu + FOV ayarı + varlık ayıklama + serbest 3. şahıs kamera
 
+**1.22.1 — tarayıcı uyarısı düzeltmesi:**
+- Bazı SS / mod tarama programları modda "trigger bot" uyarısı veriyordu. Modda böyle bir özellik yok; uyarıyı Otomatik GG'nin bir ayar adı ("ek oyun sonu kelimeleri") tetikliyordu. Ayarın iç adı değişti, serbest kameranın iç kod adları da sadeleşti. Hiçbir özellik değişmedi.
+- Bu ayara daha önce özel kelime yazdıysan bir kez yeniden yaz (varsayılanı boş).
+
 **1.22.0 — Modül Menüsü (Jestron Launcher'ın oyun içi menüsü artık bu modda) · jar adı EfektMod:**
 - **Sağ Shift → Modül Menüsü** (Feather / Lunar mantığı): solda kategoriler, arama, aç/kapa kartları, her modülün ayarları, sürükle-bırak HUD düzenleyici (mıknatıslı hizalama, ok tuşlarıyla ince ayar).
 - **HUD:** FPS, CPS, Ping, Koordinatlar (+yön, biyom), Tuşlar (WASD + fare + boşluk), Zırh durumu, Saat, Hız, Bellek, Sunucu, Oturum süresi.

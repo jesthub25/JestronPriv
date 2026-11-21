@@ -13,21 +13,21 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public abstract class MinecraftInteractMixin {
 
     @Inject(method = "startAttack()Z", at = @At("HEAD"))
-    private void jestronpriv$aimAttack(CallbackInfoReturnable<Boolean> cir) {
-        aim();
+    private void jestronpriv$freecamHit(CallbackInfoReturnable<Boolean> cir) {
+        syncFreecam();
     }
 
     @Inject(method = "startUseItem()V", at = @At("HEAD"))
-    private void jestronpriv$aimUse(CallbackInfo ci) {
-        aim();
+    private void jestronpriv$freecamUse(CallbackInfo ci) {
+        syncFreecam();
     }
 
     @Inject(method = "continueAttack(Z)V", at = @At("HEAD"))
-    private void jestronpriv$aimMine(boolean attacking, CallbackInfo ci) {
-        if (attacking) aim();
+    private void jestronpriv$freecamMine(boolean attacking, CallbackInfo ci) {
+        if (attacking) syncFreecam();
     }
 
-    private static void aim() {
+    private static void syncFreecam() {
         try {
             FreeCam.beforeInteract();
         } catch (Throwable ignored) {
