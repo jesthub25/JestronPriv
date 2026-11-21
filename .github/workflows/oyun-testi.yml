@@ -4,6 +4,11 @@ name: Oyun içi duman testi (mod 1.21.4)
 # modul menusunun yuklendigini kontrol eder.
 on:
   workflow_dispatch:
+    inputs:
+      jestron_client:
+        description: 'Ayri Jestron Client jar ini da yukle (modul menusu kopyasi devre disi kalmali)'
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -27,6 +32,17 @@ jobs:
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq xvfb libgl1-mesa-dri libglx-mesa0 >/dev/null
+      - name: Jestron Client'i indir (istenirse)
+        if: ${{ inputs.jestron_client }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          mkdir -p run/mods
+          url=$(gh api repos/jesthub25/Jestron-Launcher/releases --jq '[.[] | select(.draft|not)][0].assets[] | select(.name|test("^JestronClient-.*\\.jar$")) | .browser_download_url' | head -1)
+          test -n "$url"
+          curl -sSL -o run/mods/jestron-client.jar "$url"
+          ls -la run/mods
+
       - name: Oyunu aç
         env:
           LIBGL_ALWAYS_SOFTWARE: '1'
@@ -46,6 +62,13 @@ jobs:
           echo "----- ilgili satirlar -----"
           grep -nE "jestronpriv|Modul menusu|Efekt|ERROR|Exception|Mixin|crash" run/oyun.log | grep -v "Downloading" | head -120
           ! grep -qE "Crash report|This crash report has been saved|Mixin apply failed|InvalidInjectionException|Mixin transformation of .* failed" run/oyun.log
-          grep -q "Modul menusu yuklendi" run/oyun.log
+          if [ "${{ inputs.jestron_client }}" = "true" ]; then
+            grep -q "Ayri Jestron Client kurulu" run/oyun.log
+            ! grep -q "Modul menusu yuklendi" run/oyun.log
+            grep -q "Jestron Client yüklendi" run/oyun.log
+          else
+            grep -q "Modul menusu yuklendi" run/oyun.log
+          fi
+          ! grep -q "Invalid path in mod resource-pack jestronpriv" run/oyun.log
           grep -qE "Sound engine started|minecraft:textures/atlas/gui" run/oyun.log
           echo "OYUN TESTI GECTI"
