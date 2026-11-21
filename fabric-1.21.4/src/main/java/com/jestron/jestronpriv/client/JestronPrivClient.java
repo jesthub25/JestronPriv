@@ -68,6 +68,12 @@ public final class JestronPrivClient implements ClientModInitializer {
         instance = this;
         config = ModConfig.load();
         ModConfig.enableAsyncSave();
+        // Modul menusu (Sag Shift) — ayri Jestron Client kuruluysa o calisir, bu kapali kalir
+        try {
+            com.jestron.jestronpriv.jc.JestronClient.init();
+        } catch (Throwable t) {
+            LOG.warn("Modul menusu baslatilamadi; Efekt Menusu normal calisiyor", t);
+        }
         backend = new ClientBackend(this::config);
         engine = new FxEngine(backend);
         engine.setErrorSink((id, t) -> LOG.warn("Efekt '{}' calisirken beklenmeyen durum (efekt guvenle devam etti)", id, t));

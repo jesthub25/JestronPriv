@@ -2,6 +2,16 @@
 
 **1.20.0** — Doku Kütüphanesi (her paketten istediğin doku, mod klasöründe hazır dokular) + eşya editöründe kalıp (rehber doku) + kare kare animasyonlu çizim + yeni araçlar; eşya görünümü editörü (kendin çiz / PNG / kaynak paketi) + 10 şeffaf menü teması + her şey profil koduyla paylaşılır + 50 animasyonlu pelerin + büyü parlaması rengi + özel gökyüzü (kutup ışığı, kayan yıldız) + sis ayarı + kategorili menü + reach / ping / öldürme akışı / totem bildirimi / hitbox + ayar profilleri (kaydet / yükle / kodla paylaş) + 50 animasyonlu şapka + özel isim etiketi (50 font, 3944 emoji, kendi PNG/JPG/GIF görselin) + 50 öldürme efekti + 51 kanat + 50 aura + 50 vuruş partikülü + 50 vuruş stili + 50 yoldaş + 50 nişangah + 50 renk filtresi + PvP hissi + özel nişangah + totem (cihazından **özel totem sesi**) + saat / hava + sürükle-bırak HUD (iksir, eşya sayacı, bilgi, envanter, alınan / atılan, kombo, seri duyurusu) + yerdeki eşya etiketleri + özel seçim kutusu + FOV ayarı + varlık ayıklama + serbest 3. şahıs kamera
 
+**1.22.0 — Modül Menüsü (Jestron Launcher'ın oyun içi menüsü artık bu modda) · jar adı EfektMod:**
+- **Sağ Shift → Modül Menüsü** (Feather / Lunar mantığı): solda kategoriler, arama, aç/kapa kartları, her modülün ayarları, sürükle-bırak HUD düzenleyici (mıknatıslı hizalama, ok tuşlarıyla ince ayar).
+- **HUD:** FPS, CPS, Ping, Koordinatlar (+yön, biyom), Tuşlar (WASD + fare + boşluk), Zırh durumu, Saat, Hız, Bellek, Sunucu, Oturum süresi.
+- **PvP:** Hedef can, İsim üstü can, Dayanıklılık uyarısı. **Oynanış:** aç/kapa koşma ve eğilme. **Görsel:** Tam parlaklık, menü görünümü. **Sohbet:** sohbet saati, otomatik GG, giriş mesajı, 5 sohbet makrosu (spam korumalı).
+- İsteğe bağlı **ESC menüsü** (Görünüm › ESC menüsü); Efekt Menüsü ana ekranında yeni **Modüller** kartı, Modül Menüsü'nde **Efekt Menüsü** kısayolu.
+- İlk açılışta Efekt Menüsü'nün zaten gösterdiği FPS / Ping / Koordinat HUD'ları kapalı gelir (üst üste binmez).
+- Jestron Launcher'ın ayrı **Jestron Client** modu da kuruluysa Modül Menüsü onun üzerinden çalışır, bu moddaki kopya ve mixin'leri hiç devreye girmez: menü, HUD ve tuşlar iki kez olmaz.
+- Ayarlar `config/jestron-client.json` (Jestron Client ile aynı dosya: ayarların aynen gelir).
+- Jar dosyasının adı artık **`EfektMod-<sürüm>-mc1.21.4.jar`**.
+
 **1.21.1 — yeni görünen ad:**
 - Oyun içindeki tüm menü başlıkları, mesajlar, tuş ayarları ve mod listesi artık **Efekt Menüsü** yazar (eski: JestronPriv). Yapımcı alanı Jestron.
 - Ayarların, profillerin, çizimlerin ve klasörler (`config/jestronpriv`) aynen kalır; hiçbir şey sıfırlanmaz.

@@ -49,13 +49,15 @@ jobs:
           echo "Sürüm: $full  Jar: $jar"
 
       - name: Release oluştur / güncelle
+        # sadece main; baska dallarda (elle calistirma) yalniz derlenir
+        if: github.ref == 'refs/heads/main'
         working-directory: .
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           v=${{ steps.ver.outputs.short }}
           bash .github/scripts/yayinla.sh fabric-1.21.4 "mod-1.21.4-v$v" \
-            "Efekt Menüsü (JestronPriv) $v — Minecraft 1.21.4 (Fabric)" \
-            "${{ steps.ver.outputs.jar }}" "JestronPriv-Mod-$v-mc1.21.4" "$v" \
+            "EfektMod $v — Efekt Menüsü, Minecraft 1.21.4 (Fabric)" \
+            "${{ steps.ver.outputs.jar }}" "EfektMod-$v-mc1.21.4" "$v" \
             "**İstemci modu** · Minecraft 1.21.4 · Fabric Loader 0.16.9+ · Fabric API gerekli. Kurulum: jar dosyasını \`.minecraft/mods\` klasörüne koy (eskisini sil). Kaynak kod: \`-kaynak.zip\`." \
             true

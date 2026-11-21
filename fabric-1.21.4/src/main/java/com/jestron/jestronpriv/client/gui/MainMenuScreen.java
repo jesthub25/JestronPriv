@@ -84,6 +84,8 @@ public final class MainMenuScreen extends Screen implements JpThemed {
                 cards.add(new Card(new ItemStack(cat.icon), cat.label, () -> "§7" + list.size() + " bölüm", () -> minecraft.setScreen(new MainMenuScreen(this, cat)),
                         null, cat.hint));
             }
+            cards.add(new Card(new ItemStack(Items.REPEATER), "Modüller", ModulKart::durum, () -> ModulKart.ac(this), null,
+                    "Sağ Shift · HUD · PvP · sohbet · makro · ESC"));
         } else {
             cards.addAll(byCat.getOrDefault(category, List.of()));
         }
